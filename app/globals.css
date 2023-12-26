@@ -52,9 +52,15 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .gradientText{
+    @apply bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent;
+  }
+  .gradientBg{
+    @apply bg-gradient-to-r from-primary to-blue-500 text-primary-foreground;
   }
 }
