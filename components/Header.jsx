@@ -36,7 +36,7 @@ export default async function Header() {
                     <Button asChild><Link href="/sign-in">Login</Link></Button>
                 </SignedOut>
                 <SignedIn>
-                    <UserButton />
+                    <UserButton afterSignOutUrl="/"/>
                 </SignedIn>
                 <ModeToggle />
             </div>
@@ -64,7 +64,7 @@ export default async function Header() {
                     <Button asChild><Link href="/sign-in">Login</Link></Button>
                 </SignedOut>
                 <SignedIn>
-                    <UserButton/>
+                    <UserButton afterSignOutUrl="/"/>
                 </SignedIn>
             </div>
         </header>
