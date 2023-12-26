@@ -12,7 +12,7 @@ import {
 
 export default function Header() {
     return (
-        <header className="flex justify-between py-6 px-8 md:px-20 fixed top-0 left-0 right-0 backdrop-blur-2xl z-10">
+        <header className="flex justify-between py-6 px-8 md:px-20">
             <div>
                 <h1 className="font-bold text-3xl"><span className="gradientText">E</span>store<span className="gradientText">.</span></h1>
             </div>
