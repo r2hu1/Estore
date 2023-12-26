@@ -11,8 +11,8 @@ export default function Home() {
       <Header/>
       <Hero/>
       {/* <Categories/> */}
-      <IconProducts/>
       <TemplateProducts/>
+      <IconProducts/>
       <Footer/>
     </main>
   );

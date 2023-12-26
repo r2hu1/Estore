@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 export default function TemplateProducts() {
     const product = [
         {
-            name: "SaaS Landing Page",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
+            name: "E-commerce Store",
+            image: "https://sgwebpartners.com/wp-content/uploads/2019/04/woocommerce-wholesale-storm-creek-983x553.jpg",
             price: '15$',
             link: "#"
         },
@@ -14,35 +14,11 @@ export default function TemplateProducts() {
             image: "https://uikitfree.com/wp-content/uploads/2022/11/Portfolio-Landing-Page-Free-Figma-Website-Template-561x338.jpg",
             price: '15$',
             link: "#"
-        },
-        {
-            name: "E-commerce Store",
-            image: "https://sgwebpartners.com/wp-content/uploads/2019/04/woocommerce-wholesale-storm-creek-983x553.jpg",
-            price: '15$',
-            link: "#"
-        }
-        , {
-            name: "Linktree Page",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '15$',
-            link: "#"
-        }
-        , {
-            name: "Agency Landing Page",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '15$',
-            link: "#"
-        }
-        , {
-            name: "Custom Website",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '50-100$',
-            link: "https://rahul.eu.org"
         }
     ];
     return (
         <section className="px-6 py-10 md:px-20">
-            <div className="flex flex-col mb-6 justify-center items-center" id="icons">
+            <div className="flex flex-col mb-6 justify-center items-center" id="templates">
                 <h1 className="text-lg font-bold gradientText">
                     Website Templates
                 </h1>
@@ -52,7 +28,7 @@ export default function TemplateProducts() {
 
                 {
                     product.map((item, index) => (
-                        <div className="border rounded-md w-fit bg-background dark:bg-secondary p-1 transition hover:-translate-y-2" key={index}>
+                        <div className="border rounded-md w-fit bg-background dark:bg-secondary p-1 transition hover:scale-105" key={index}>
                             <a href={item.link} className="relative hover:">
                                 <img className="rounded-md md:h-[200px] md:w-[300px] w-full h-[260px] max-h-[300px] max-w-[350px]" src={item.image} alt="thumbnail" />
                             </a>

@@ -1,40 +1,17 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "./ui/button";
 
 export default function IconProducts() {
     const product = [
         {
-            name: "Sketch Icon Pack",
+            name: "Svg Icon Pack",
             image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '15$',
+            price: '25$',
             link: "#"
         },
         {
-            name: "Web Icon Pack",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '15$',
-            link: "#"
-        },
-        {
-            name: "Android Icon Pack",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '15$',
-            link: "#"
-        }
-        , {
-            name: "Github Icon Pack",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '15$',
-            link: "#"
-        }
-        , {
-            name: "Demo Icon Pack",
-            image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
-            price: '15$',
-            link: "#"
-        }
-        , {
-            name: "Test Icon Pack",
+            name: "Editing Icon Pack",
             image: "https://www.sketchappsources.com/resources/source-image/essentials-icon-pack-deemak-daksina.jpg",
             price: '15$',
             link: "#"
@@ -52,7 +29,7 @@ export default function IconProducts() {
 
                 {
                     product.map((item, index) => (
-                        <div className="border rounded-md w-fit bg-background dark:bg-secondary p-1 transition hover:-translate-y-2" key={index}>
+                        <div className="border rounded-md w-fit bg-background dark:bg-secondary p-1 transition hover:scale-105" key={index}>
                             <a href={item.link} className="relative">
                                 <img className="rounded-md md:h-[200px] md:w-[300px] w-full h-[260px] max-h-[300px] max-w-[600px]" src={item.image} alt="thumbnail" />
                             </a>
