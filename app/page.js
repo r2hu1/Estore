@@ -5,15 +5,15 @@ import Hero from "@/components/Hero";
 import IconProducts from "@/components/IconProducts";
 import TemplateProducts from "@/components/TemplateProducts";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
-      <Header/>
-      <Hero/>
+      <Header />
+      <Hero />
       {/* <Categories/> */}
-      <TemplateProducts/>
-      <IconProducts/>
-      <Footer/>
+      <TemplateProducts />
+      <IconProducts />
+      <Footer />
     </main>
   );
 };
