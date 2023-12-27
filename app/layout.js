@@ -12,7 +12,10 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Estore - Your Digital Marketplace',
+  title: {
+    default: 'Estore - Your Digital Marketplace',
+    template: '%s | Estore',
+  },
   description: 'all in place to get icons, temlates, design in lowest cost possible.',
 }
 
@@ -42,9 +45,9 @@ export default function RootLayout({ children }) {
               zIndex={1600}
               showAtBottom={false}
             />
-            <Header/>
+            <Header />
             {children}
-            <Footer/>
+            <Footer />
           </ThemeProvider>
         </body>
       </html>
