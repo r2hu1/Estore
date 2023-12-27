@@ -3,6 +3,8 @@ import './globals.css'
 import { ThemeProvider } from "@/components/theme-provider"
 import { ClerkProvider } from '@clerk/nextjs'
 import NextTopLoader from 'nextjs-toploader';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -40,7 +42,9 @@ export default function RootLayout({ children }) {
               zIndex={1600}
               showAtBottom={false}
             />
+            <Header/>
             {children}
+            <Footer/>
           </ThemeProvider>
         </body>
       </html>

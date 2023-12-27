@@ -8,12 +8,10 @@ import TemplateProducts from "@/components/TemplateProducts";
 export default async function Home() {
   return (
     <main>
-      <Header />
       <Hero />
       {/* <Categories/> */}
       <TemplateProducts />
       <IconProducts />
-      <Footer />
     </main>
   );
 };

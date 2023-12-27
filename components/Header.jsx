@@ -23,7 +23,9 @@ export default async function Header() {
     return (
         <header className="flex justify-between py-6 px-8 md:px-20">
             <div>
-                <h1 className="font-bold text-3xl"><span className="gradientText">E</span>store<span className="gradientText">.</span></h1>
+                <Link href="/">
+                    <h1 className="font-bold text-3xl select-none"><span className="gradientText">E</span>store<span className="gradientText">.</span></h1>
+                </Link>
             </div>
             <div className="hidden md:flex items-center justify-center gap-3">
                 <ul className="flex gap-6 mr-5">
@@ -36,7 +38,7 @@ export default async function Header() {
                     <Button asChild><Link href="/sign-in">Login</Link></Button>
                 </SignedOut>
                 <SignedIn>
-                    <UserButton afterSignOutUrl="/"/>
+                    <UserButton afterSignOutUrl="/" />
                 </SignedIn>
                 <ModeToggle />
             </div>
@@ -64,7 +66,7 @@ export default async function Header() {
                     <Button asChild><Link href="/sign-in">Login</Link></Button>
                 </SignedOut>
                 <SignedIn>
-                    <UserButton afterSignOutUrl="/"/>
+                    <UserButton afterSignOutUrl="/" />
                 </SignedIn>
             </div>
         </header>
