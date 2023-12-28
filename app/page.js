@@ -9,7 +9,7 @@ export default async function Home() {
       <Hero />
       <EbookProducts/>
       <TemplateProducts />
-      {/* <IconProducts /> */}
+      <IconProducts />
     </main>
   );
 };
