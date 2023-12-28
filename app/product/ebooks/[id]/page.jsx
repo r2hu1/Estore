@@ -26,7 +26,6 @@ export default async function Page({ params }) {
         process.env.APPWRITE_EBOOKS_COLLECTION_ID,
         [
             Query.notEqual("name", name)
-
         ],
     );
 
