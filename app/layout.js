@@ -5,6 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import NextTopLoader from 'nextjs-toploader';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Toaster } from "@/components/ui/sonner"
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
             />
             <Header />
             {children}
+            <Toaster />
             <Footer />
           </ThemeProvider>
         </body>

@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <main>
       <Hero />
-      <EbookProducts/>
+      <EbookProducts />
       <TemplateProducts />
       <IconProducts />
     </main>

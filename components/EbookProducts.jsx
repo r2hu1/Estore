@@ -12,7 +12,7 @@ export default async function EbookProducts() {
     }
     return (
         <section className="px-6 py-10 md:px-20">
-            <div className="flex flex-col mb-6 justify-center items-center" id="templates">
+            <div className="flex flex-col mb-6 justify-center items-center" id="ebooks">
                 <h1 className="text-lg font-bold gradientText">
                     E-Books
                 </h1>
