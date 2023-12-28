@@ -23,6 +23,10 @@ export default async function Page({ params }) {
     let { documents: similar } = await database.listDocuments(
         process.env.APPWRITE_DATABASE_ID,
         process.env.APPWRITE_TEMPLATES_COLLECTION_ID,
+        [
+            Query.notEqual("name", name)
+
+        ],
     );
 
 
