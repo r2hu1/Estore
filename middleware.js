@@ -1,7 +1,7 @@
 import { authMiddleware } from "@clerk/nextjs";
  
 export default authMiddleware({
-  publicRoutes: req => !req.url.includes('/checkout')
+  publicRoutes:['((?!^/checkout/).*)'],
 })
  
 export const config = {

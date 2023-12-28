@@ -8,7 +8,7 @@ export default function Page() {
                 </h1>
                 <p className="text-xs">updated on: 28/12/23</p>
             </div>
-            <p className="text-sm mt-3 p-2 dark:bg-secondary bg-background border rounded-lg">
+            <p className="text-sm mt-3 p-3 dark:bg-secondary bg-background border rounded-lg">
                 At Estore, we value your privacy and aim to provide a transparent understanding of how we use information.
                 <br />
                 <br />

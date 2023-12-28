@@ -8,7 +8,7 @@ export default function Page() {
                 </h1>
                 <p className="text-xs">updated on: 28/12/23</p>
             </div>
-            <p className="text-sm mt-3 p-2 dark:bg-secondary bg-background border rounded-lg">
+            <p className="text-sm mt-3 p-3 dark:bg-secondary bg-background border rounded-lg">
                 Welcome to Estore, your destination for top-quality digital products including ebooks, templates, and icons. We aim to provide you with exceptional content to meet your needs.
 
                 As digital products are instantly accessible upon purchase, we generally do not offer refunds once the product has been downloaded or accessed.

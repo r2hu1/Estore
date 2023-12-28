@@ -1,4 +1,3 @@
-import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { currentUser } from '@clerk/nextjs';
@@ -13,8 +12,8 @@ export default async function Hero() {
                 <p className="md:text-sm text-xs mt-2 max-w-md mx-auto">Welcome to Estore. Every assest on our platform is verified by our team to ensure our highest quality standards</p>
             </div>
             <div className="flex gap-3">
-                <Button asChild><Link href={!user ? "/sign-in" : "#ebooks"}>{!user ? "Get Started" : "Explore Now"}</Link></Button>
-                <Button variant="outline" asChild><Link href="#templates">Latest Products</Link></Button>
+                <Button asChild><Link href={!user ? "/sign-in" : "#templates"}>{!user ? "Get Started" : "Explore Products"}</Link></Button>
+                <Button variant="outline" asChild><Link href={!user ? "#templates" : "#templates"}>{!user ? "Explore Products" : "All Products"}</Link></Button>
             </div>
         </div>
     );
