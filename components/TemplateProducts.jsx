@@ -1,15 +1,15 @@
-"use client";
+import { database } from "@/lib/appwrite";
 import Product from "./Product";
 
-export default function TemplateProducts() {
-    const product = [
-        {
-            name: "E-commerce Store",
-            image: "https://sgwebpartners.com/wp-content/uploads/2019/04/woocommerce-wholesale-storm-creek-983x553.jpg",
-            price: '15$',
-            link: "/product/template/658c4a24541dba83bcdb"
-        }
-    ];
+export default async function TemplateProducts() {
+    const {documents} = await database.listDocuments(
+        process.env.APPWRITE_DATABASE_ID,
+        process.env.APPWRITE_TEMPLATES_COLLECTION_ID,
+    );
+    const product = [];
+    for(let i = 0; i < documents.length; i++) {
+        await product.push(documents[i]);
+    }
 
     return (
         <section className="px-6 py-10 md:px-20">
@@ -22,13 +22,13 @@ export default function TemplateProducts() {
             <div className="flex flex-wrap md:gap-4 gap-6 items-center justify-center">
 
                 {
-                    product.map((item, index) => (
+                     product.map((item, index) => (
                         <Product
                             key={index}
                             name={item.name}
                             image={item.image}
                             price={item.price}
-                            link={item.link}
+                            link={`/product/template/${item.$id}`}
                         />
                     ))
                 }

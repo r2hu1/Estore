@@ -2,7 +2,6 @@ import Product from "@/components/Product";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { database, getTemplates } from "@/lib/appwrite";
-import { template } from "@/products/template";
 import { Query } from "appwrite";
 import { Check, Shield } from "lucide-react";
 import Link from "next/link";
