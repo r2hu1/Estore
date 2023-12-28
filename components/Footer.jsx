@@ -1,3 +1,4 @@
+import Link from 'next/link'
 export default function Footer() {
     return (
         <footer className="py-16 md:px-20 grid gap-3 px-10 relative">
@@ -7,12 +8,12 @@ export default function Footer() {
                 <p className="text-xs mt-1">An digital marketplace for content creaters, editors and coders.</p>
             </div>
             <ul>
-                <li><a href="/privacy-policy" className="hover:text-primary hover:underline text-sm">Privacy Policy</a></li>
-                <li><a href="/refund-policy" className="hover:text-primary hover:underline text-sm">Refund Policy</a></li>
+                <li><Link href="/privacy-policy" className="hover:text-primary hover:underline text-sm">Privacy Policy</Link></li>
+                <li><Link href="/refund-policy" className="hover:text-primary hover:underline text-sm">Refund Policy</Link></li>
             </ul>
             <ul>
-                <li><a href="/contact" className="hover:text-primary hover:underline text-sm">Contact Us</a></li>
-                <li><a href="/contact" className="hover:text-primary hover:underline text-sm">Sponsership</a></li>
+                <li><Link href="/contact" className="hover:text-primary hover:underline text-sm">Contact Us</Link></li>
+                <li><Link href="/contact" className="hover:text-primary hover:underline text-sm">Sponsership</Link></li>
                 <p className="text-sm mt-6"> &copy; 2022 All Rights Reserved.</p>
             </ul>
         </footer>

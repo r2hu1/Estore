@@ -9,8 +9,8 @@ export default async function Home() {
   return (
     <main>
       <Hero />
-      <EbookProducts />
       <TemplateProducts />
+      <EbookProducts />
       <IconProducts />
     </main>
   );
