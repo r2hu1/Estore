@@ -12,7 +12,7 @@ export default async function Hero() {
                 <p className="md:text-sm text-xs mt-2 max-w-md mx-auto">Welcome to Estore. Every assest on our platform is verified by our team to ensure our highest quality standards</p>
             </div>
             <div className="flex gap-3">
-                <Button asChild><Link href={!user ? "/sign-up" : "#templates"}>{!user ? "Get Started" : "Explore Products"}</Link></Button>
+                <Button asChild><Link href={!user ? "/sign-up" : "/manage"}>{!user ? "Get Started" : "My Products"}</Link></Button>
                 <Button variant="outline" asChild><Link href={!user ? "#templates" : "#templates"}>{!user ? "Explore Products" : "All Products"}</Link></Button>
             </div>
         </div>
