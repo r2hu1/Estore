@@ -6,7 +6,7 @@ import EbookProducts from "@/components/EbookProducts";
 export default async function Home() {
   return (
     <main>
-      <Hero />
+      <Hero vlv={"All Products"}/>
       <TemplateProducts showLabel />
       <EbookProducts showLabel />
       <IconProducts showLabel />

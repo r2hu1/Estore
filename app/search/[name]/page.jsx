@@ -7,7 +7,7 @@ import TemplateProducts from "@/components/TemplateProducts";
 export default function Page({ params }) {
     return (
         <div>
-            <Hero />
+            <Hero vlv={params.name == "icon" ? "Icon Packs" : params.name == "template" ? "Website Templates" : params.name == "ebook" ? "E-Books" : "Not Found"}/>
             <div className="flex flex-col justify-center items-center" id="ebooks">
                 <h1 className="text-lg font-bold gradientText">
                     Search Result

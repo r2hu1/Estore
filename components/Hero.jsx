@@ -4,7 +4,7 @@ import { currentUser } from '@clerk/nextjs';
 import Filters from "./Filter";
 
 
-export default async function Hero() {
+export default async function Hero({vlv}) {
     const user = await currentUser();
     return (
         <div className="text-center py-20 px-8 flex flex-col gap-6 justify-center items-center">
@@ -19,7 +19,7 @@ export default async function Hero() {
                     <Button variant="outline" asChild><Link href={!user ? "#templates" : "#templates"}>{!user ? "Explore Products" : "All Products"}</Link></Button>
                 </div>
             ) : (
-                <Filters/>
+                <Filters values={vlv}/>
             )}
         </div>
     );

@@ -10,7 +10,7 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function Filters() {
+export default function Filters({values}) {
     const [search, setSearch] = useState("");
     const router = useRouter();
     const handleSubmit = () => {
@@ -21,7 +21,7 @@ export default function Filters() {
         <div className="flex gap-3">
             <Select onValueChange={(e)=>{setSearch(e)}}>
                 <SelectTrigger className="w-[190px]">
-                    <SelectValue placeholder="All Products" />
+                    <SelectValue placeholder={values ||"All Products"} />
                 </SelectTrigger>
                 <SelectContent>
                     <SelectItem value="template">Website Templates</SelectItem>
