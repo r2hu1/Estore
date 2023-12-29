@@ -95,7 +95,13 @@ export default async function Page({ params }) {
                     </h1>
                     <p className="text-xs mt-0">we thought you may like this also.</p>
                 </div>
-                <Product name={similar[0].name} image={similar[0].image} price={similar[0].price} link={`/product/icons/${similar[0].$id}`} />
+                <div className="md:flex md:gap-4 gap-6 grid md:place-content-center">
+                    {
+                        similar.map((item, index) => (
+                            <Product key={index} name={item.name} image={item.image} price={item.price} link={`/product/template/${item.$id}`} />
+                        ))
+                    }
+                </div>
             </div>
         </main>
     )
