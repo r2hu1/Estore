@@ -10,7 +10,7 @@ export default function Footer() {
                 </Link>
                 <p className="text-xs mt-0">An digital marketplace for content creaters, editors and coders.</p>
             </div>
-            <div className='flex gap-10 md:justify-between'>
+            <div className='flex gap-10'>
                 <ul>
                     <li><Link href="/privacy-policy" className="hover:text-primary hover:underline text-sm">Privacy Policy</Link></li>
                     <li><Link href="/refund-policy" className="hover:text-primary hover:underline text-sm">Refund Policy</Link></li>
