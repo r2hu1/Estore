@@ -1,7 +1,7 @@
 import { database } from "@/lib/appwrite";
 import Product from "./Product";
 
-export default async function IconProducts(showLabel) {
+export default async function IconProducts({showLabel}) {
     const { documents } = await database.listDocuments(
         process.env.APPWRITE_DATABASE_ID,
         process.env.APPWRITE_ICONS_COLLECTION_ID,

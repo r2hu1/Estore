@@ -1,6 +1,8 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { currentUser } from '@clerk/nextjs';
+import Filters from "./Filter";
+
 
 export default async function Hero() {
     const user = await currentUser();
@@ -11,10 +13,14 @@ export default async function Hero() {
                 <h1 className="font-bold md:text-4xl text-3xl">Your marketplace for high-quality <span className="gradientText">digital assests</span>.</h1>
                 <p className="md:text-sm text-xs mt-2 max-w-md mx-auto">Welcome to Estore. Every assest on our platform is verified by our team to ensure our highest quality standards</p>
             </div>
-            <div className="flex gap-3">
-                <Button asChild><Link href={!user ? "/sign-up" : "/manage"}>{!user ? "Get Started" : "My Products"}</Link></Button>
-                <Button variant="outline" asChild><Link href={!user ? "#templates" : "#templates"}>{!user ? "Explore Products" : "All Products"}</Link></Button>
-            </div>
+            {!user ? (
+                <div className="flex gap-3">
+                    <Button asChild><Link href={!user ? "/sign-up" : "#templates"}>{!user ? "Get Started" : "Latest Products"}</Link></Button>
+                    <Button variant="outline" asChild><Link href={!user ? "#templates" : "#templates"}>{!user ? "Explore Products" : "All Products"}</Link></Button>
+                </div>
+            ) : (
+                <Filters/>
+            )}
         </div>
     );
 };
