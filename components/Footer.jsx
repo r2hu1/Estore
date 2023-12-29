@@ -1,8 +1,4 @@
 import Link from 'next/link';
-import { Input } from "@/components/ui/input"
-import { Label } from './ui/label';
-import { Button } from './ui/button';
-import { ArrowRight } from 'lucide-react';
 
 export default function Footer() {
     return (
