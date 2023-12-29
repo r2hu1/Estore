@@ -78,7 +78,7 @@ export default async function Page({ params }) {
                     </h1>
                     <p className="text-xs mt-0">we thought you may like this also.</p>
                 </div>
-                <Product name={similar[0].name} image={similar[0].image} price={similar[0].price} link={`/product/ebooks/${similar[0].$id}`} />
+                <Product name={similar[0].name} image={similar[0].image} price={similar[0].price} link={`/product/ebooks/${similar[0].$id}`}/>
             </div>
         </main>
     )
