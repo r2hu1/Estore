@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="py-16 md:px-24 grid gap-3 px-10 relative">
+        <footer className="py-16 md:px-24 grid gap-3 px-10 relative mt-6">
             <div className="absolute rotate-180 inset-0 -z-10 h-[120%] -mt-20 w-full bg-white dark:bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-15 dark:opacity-25 blur-[100px]"></div></div>
             <div className="mb-3">
                 <Link href="/">
