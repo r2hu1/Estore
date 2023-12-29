@@ -1,3 +1,6 @@
+export const metadata = {
+    title: 'Privacy Policy',
+};
 export default function Page() {
     return (
         <div className="px-8 md:px-20 py-20">

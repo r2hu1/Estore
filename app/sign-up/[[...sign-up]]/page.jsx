@@ -1,5 +1,10 @@
 import { SignUp } from "@clerk/nextjs";
 
+
+export const metadata = {
+  title: 'Sign Up',
+};
+
 export default function Page() {
   return (
     <div className="flex mt-24 items-center justify-center w-full">
