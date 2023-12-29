@@ -20,7 +20,7 @@ export default function Footer() {
                     <li><Link href="/contact" className="hover:text-primary hover:underline text-sm">Sponsership</Link></li>
                 </ul>
             </div>
-            <p className="text-xs mt-3 md:text-center md:mt-5"> &copy; 2022 Estore All Rights Reserved.</p>
+            <p className="text-xs mt-3"> &copy; 2022 Estore All Rights Reserved.</p>
         </footer>
     )
 };
