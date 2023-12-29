@@ -5,6 +5,8 @@ import { database, getTemplates } from "@/lib/appwrite";
 import { Query } from "appwrite";
 import { Check, Shield } from "lucide-react";
 import Link from "next/link";
+import PreviewImage from "../../_components/PreviewImage";
+
 
 export const metadata = {
     title: 'E-Book',
