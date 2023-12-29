@@ -21,7 +21,7 @@ export default function PreviewImage({ url }) {
             <DrawerContent>
                 <DrawerHeader>
                     <DrawerDescription>
-                        <img height={200} width={200} src={url} className="w-full rounded-lg select-none pointer-events-none" />
+                        <img height={200} width={200} src={url} className="w-full rounded-lg select-none pointer-events-none md:max-h-[400px] md:max-w-[400px] md:mx-auto" />
                     </DrawerDescription>
                 </DrawerHeader>
                 <DrawerFooter>
