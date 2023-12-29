@@ -9,12 +9,15 @@ import {
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Loader } from "lucide-react";
 
 export default function Filters({values}) {
     const [search, setSearch] = useState("");
+    const [isSearching, setIsSearching] = useState(false);
     const router = useRouter();
     const handleSubmit = () => {
         if (search == "") return;
+        setIsSearching(true);
         router.push(`/search/${search}`);
     };
     return (
@@ -29,7 +32,7 @@ export default function Filters({values}) {
                     <SelectItem value="icon">Icon Packs</SelectItem>
                 </SelectContent>
             </Select>
-            <Button onClick={handleSubmit}>Search</Button>
+            <Button onClick={handleSubmit}>{!isSearching ? "Search" : (<Loader className="animate-spin"/>)}</Button>
         </div>
     )
 };
