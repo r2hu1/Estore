@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { currentUser } from '@clerk/nextjs';
-import Filters from "./Filter";
+import Filters from "./utlis/Filter";
 
 
 export default async function Hero({vlv}) {

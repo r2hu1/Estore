@@ -1,5 +1,5 @@
 import { database } from "@/lib/appwrite";
-import Product from "./Product";
+import Product from "../Product";
 
 export default async function EbookProducts({showLabel}) {
     const product = [];

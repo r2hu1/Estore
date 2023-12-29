@@ -1,7 +1,7 @@
-import EbookProducts from "@/components/EbookProducts";
+import EbookProducts from "@/components/utlis/EbookProducts";
 import Hero from "@/components/Hero";
-import IconProducts from "@/components/IconProducts";
-import TemplateProducts from "@/components/TemplateProducts";
+import IconProducts from "@/components/utlis/IconProducts";
+import TemplateProducts from "@/components/utlis/TemplateProducts";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

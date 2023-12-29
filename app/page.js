@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
-import IconProducts from "@/components/IconProducts";
-import TemplateProducts from "@/components/TemplateProducts";
-import EbookProducts from "@/components/EbookProducts";
+import IconProducts from "@/components/utlis/IconProducts";
+import TemplateProducts from "@/components/utlis/TemplateProducts";
+import EbookProducts from "@/components/utlis/EbookProducts";
 
 export default async function Home() {
   return (
