@@ -32,7 +32,7 @@ export default function Filters({values}) {
                     <SelectItem value="icon">Icon Packs</SelectItem>
                 </SelectContent>
             </Select>
-            <Button onClick={handleSubmit}>{!isSearching ? "Search" : (<Loader className="animate-spin"/>)}</Button>
+            <Button disabled={search.length < 1} onClick={handleSubmit}>{!isSearching ? "Search" : (<Loader className="animate-spin"/>)}</Button>
         </div>
     )
 };
