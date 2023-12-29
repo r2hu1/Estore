@@ -56,15 +56,17 @@ export default async function Page({ params }) {
                             <Badge>Templates</Badge>
                         </div>
                     </div>
-                    <div className="mt-6 hidden md:block">
+                    <div className="mt-6 hidden md:flex gap-2">
+                        <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
                         <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
                     </div>
                 </div>
                 <div className="w-full max-w-lg">
                     <div>
-                        <img className="rounded-lg" src={image} alt={name} />
+                        <img className="rounded-lg md:max-h-[340px] md:min-w-full" src={image} alt={name} />
                     </div>
-                    <div className="mt-6 block md:hidden">
+                    <div className="mt-6 flex gap-2 md:hidden">
+                        <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
                         <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
                     </div>
                 </div>
