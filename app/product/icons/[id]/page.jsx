@@ -99,7 +99,7 @@ export default async function Page({ params }) {
                 <div className="md:flex md:gap-4 gap-6 grid place-content-center">
                     {
                         similar.map((item, index) => (
-                            <Product key={index} name={item.name} image={item.image} price={item.price} link={`/product/template/${item.$id}`} />
+                            <Product key={index} name={item.name} image={item.image} price={item.price} link={`/product/icons/${item.$id}`} />
                         ))
                     }
                 </div>
