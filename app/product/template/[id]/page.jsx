@@ -78,7 +78,7 @@ export default async function Page({ params }) {
                         </div>
                         <div className="mt-6 hidden md:flex gap-2">
                             <PreviewImage url={image}/>
-                            <Button className="w-full" asChild><a href={!user ? "/sign-in" : url}>Buy Now</a></Button>
+                            <Button className="w-full" asChild><Link href={!user ? "/sign-in" : url}>Buy Now</Link></Button>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ export default async function Page({ params }) {
                     </div>
                     <div className="mt-6 flex gap-2 md:hidden">
                         <PreviewImage url={image}/>
-                        <Button className="w-full" asChild><a href={!user ? "/sign-in" : url}>Buy Now</a></Button>
+                        <Button className="w-full" asChild><Link href={!user ? "/sign-in" : url}>Buy Now</Link></Button>
                     </div>
                 </div>
             </div>

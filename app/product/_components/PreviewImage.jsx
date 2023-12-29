@@ -15,8 +15,8 @@ import Image from "next/image"
 export default function PreviewImage({ url }) {
     return (
         <Drawer>
-            <DrawerTrigger>
-                <Button className="w-full" variant='outline'>Preview</Button>
+            <DrawerTrigger className="w-full bg-background border rounded-md text-sm hover:bg-secondary transition">
+                Preview
             </DrawerTrigger>
             <DrawerContent>
                 <DrawerHeader>
