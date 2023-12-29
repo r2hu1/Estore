@@ -1,4 +1,3 @@
-import { metadata } from "@/app/layout";
 import EbookProducts from "@/components/EbookProducts";
 import Hero from "@/components/Hero";
 import IconProducts from "@/components/IconProducts";
