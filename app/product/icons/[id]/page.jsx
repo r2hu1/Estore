@@ -33,7 +33,7 @@ export default async function Page({ params }) {
     return (
         <main className="px-8 md:px-20 py-24 lg:px-[120px] grid place-items-center md:block">
             <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 mb-10 -z-10 m-auto h-[300px] w-[300px] rounded-full bg-primary opacity-15 blur-[100px]"></div></div>
-            <div className="flex gap-2 text-xs justify-start items-start w-full mb-3 px-1">
+            <div className="flex gap-2 text-xs justify-start items-start w-full mb-3">
                 <span>Product</span>
                 <span>/</span>
                 <span>Icons</span>
@@ -56,9 +56,25 @@ export default async function Page({ params }) {
                             <Badge>Icons</Badge>
                         </div>
                     </div>
-                    <div className="mt-6 hidden md:flex gap-2">
-                        <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
-                        <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
+                    <div>
+                        <div className="grid gap-2">
+                            <div className="flex gap-3 items-center">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <p className="text-xs">Secure payments!</p>
+                            </div>
+                            <div className="flex gap-3 items-center">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <p className="text-xs">Anytime downloads!</p>
+                            </div>
+                            <div className="flex gap-3 items-center">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <p className="text-xs">Avilable for instant delevery!</p>
+                            </div>
+                        </div>
+                        <div className="mt-6 hidden md:flex gap-2">
+                            <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
+                            <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
+                        </div>
                     </div>
                 </div>
                 <div className="w-full max-w-lg">

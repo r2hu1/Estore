@@ -56,9 +56,25 @@ export default async function Page({ params }) {
                             <Badge>Templates</Badge>
                         </div>
                     </div>
-                    <div className="mt-6 hidden md:flex gap-2">
-                        <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
-                        <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
+                    <div>
+                        <div className="grid gap-2">
+                            <div className="flex gap-3 items-center">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <p className="text-xs">Secure payments!</p>
+                            </div>
+                            <div className="flex gap-3 items-center">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <p className="text-xs">Anytime downloads!</p>
+                            </div>
+                            <div className="flex gap-3 items-center">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <p className="text-xs">Avilable for instant delevery!</p>
+                            </div>
+                        </div>
+                        <div className="mt-6 hidden md:flex gap-2">
+                            <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
+                            <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
+                        </div>
                     </div>
                 </div>
                 <div className="w-full max-w-lg">
@@ -79,7 +95,13 @@ export default async function Page({ params }) {
                     </h1>
                     <p className="text-xs mt-0">we thought you may like this also.</p>
                 </div>
-                <Product name={similar[0].name} image={similar[0].image} price={similar[0].price} link={`/product/template/${similar[0].$id}`} />
+                <div className="md:flex gap-5 grid md:place-content-center">
+                    {
+                        similar.map((item, index) => (
+                            <Product key={index} name={item.name} image={item.image} price={item.price} link={`/product/template/${item.$id}`} />
+                        ))
+                    }
+                </div>
             </div>
         </main>
     )
