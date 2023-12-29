@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export const metadata = {
     title: 'Icons',
+    description:'Category Icons'
 };
 
 export default async function Page({ params }) {
@@ -72,7 +73,7 @@ export default async function Page({ params }) {
                             </div>
                         </div>
                         <div className="mt-6 hidden md:flex gap-2">
-                            <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
+                            <PreviewImage url={image}/>
                             <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
                         </div>
                     </div>
@@ -82,7 +83,7 @@ export default async function Page({ params }) {
                         <img className="rounded-lg md:max-h-[340px] md:min-w-full" src={image} alt={name} />
                     </div>
                     <div className="mt-6 flex gap-2 md:hidden">
-                        <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
+                        <PreviewImage url={image}/>
                         <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
                     </div>
                 </div>

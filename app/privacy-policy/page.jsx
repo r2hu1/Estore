@@ -1,17 +1,18 @@
 export const metadata = {
     title: 'Privacy Policy',
+    description: 'At Estore, we value your privacy and aim to provide a transparent understanding of how we use information.',
 };
 export default function Page() {
     return (
         <div className="px-8 md:px-20 py-20">
-            <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 mb-10 -z-10 m-auto h-[300px] w-[300px] rounded-full bg-primary opacity-15 blur-[100px]"></div></div>
+            <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="dark:opacity-25 absolute left-0 right-0 top-0 mb-10 -z-10 m-auto h-[300px] w-[300px] rounded-full bg-primary opacity-15 blur-[100px]"></div></div>
             <div className="mb-5 text-center">
                 <h1 className="text-3xl font-bold gradientText">
                     Privacy Policy<span className="text-white">.</span>
                 </h1>
                 <p className="text-xs">updated on: 28/12/23</p>
             </div>
-            <p className="text-sm mt-3 p-3 dark:bg-secondary bg-background border rounded-lg">
+            <p className="text-sm mt-3 p-3 bg-background border rounded-lg">
                 At Estore, we value your privacy and aim to provide a transparent understanding of how we use information.
                 <br />
                 <br />
@@ -29,8 +30,8 @@ export default function Page() {
                 <br />
                 <b>Data Security: </b>
                 We employ industry-standard security measures to protect your information. However, no method of transmission over the internet or electronic storage is entirely secure. While we strive to protect your data, we cannot guarantee absolute security.
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <b>Your Consent: </b>
                 By using our website, you consent to the use of cookies as described in this policy. You can modify your browser settings to control or block cookies, although this might affect certain functionalities of the site.
                 <br />

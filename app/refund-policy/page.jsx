@@ -1,17 +1,18 @@
 export const metadata = {
     title: 'Refund Policy',
+    description: 'To get a refund, please visit our Contact Page and submit a request with your order details and a brief description of the situation.',
 };
 export default function Page() {
     return (
         <div className="px-8 md:px-20 py-20">
-            <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 mb-10 -z-10 m-auto h-[300px] w-[300px] rounded-full bg-primary opacity-15 blur-[100px]"></div></div>
+            <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="dark:opacity-25 absolute left-0 right-0 top-0 mb-10 -z-10 m-auto h-[300px] w-[300px] rounded-full bg-primary opacity-15 blur-[100px]"></div></div>
             <div className="mb-5 text-center">
                 <h1 className="text-3xl font-bold gradientText">
                     Refund Policy<span className="text-white">.</span>
                 </h1>
                 <p className="text-xs">updated on: 28/12/23</p>
             </div>
-            <p className="text-sm mt-3 p-3 dark:bg-secondary bg-background border rounded-lg">
+            <p className="text-sm mt-3 p-3 bg-background border rounded-lg">
                 Welcome to Estore, your destination for top-quality digital products including ebooks, templates, and icons. We aim to provide you with exceptional content to meet your needs.
 
                 As digital products are instantly accessible upon purchase, we generally do not offer refunds once the product has been downloaded or accessed.

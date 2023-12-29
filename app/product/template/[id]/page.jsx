@@ -5,12 +5,17 @@ import { database, getTemplates } from "@/lib/appwrite";
 import { Query } from "appwrite";
 import { Check, Shield } from "lucide-react";
 import Link from "next/link";
+import { currentUser } from "@clerk/nextjs";
+import PreviewImage from "../../_components/PreviewImage";
 
 export const metadata = {
     title: 'Templates',
+    description:'Category Templates'
 };
 
 export default async function Page({ params }) {
+    const user = await currentUser();
+
     let { documents } = await database.listDocuments(
         process.env.APPWRITE_DATABASE_ID,
         process.env.APPWRITE_TEMPLATES_COLLECTION_ID,
@@ -72,8 +77,8 @@ export default async function Page({ params }) {
                             </div>
                         </div>
                         <div className="mt-6 hidden md:flex gap-2">
-                            <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
-                            <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
+                            <PreviewImage url={image}/>
+                            <Button className="w-full" asChild><a href={!user ? "/sign-in" : url}>Buy Now</a></Button>
                         </div>
                     </div>
                 </div>
@@ -82,8 +87,8 @@ export default async function Page({ params }) {
                         <img className="rounded-lg md:max-h-[340px] md:min-w-full" src={image} alt={name} />
                     </div>
                     <div className="mt-6 flex gap-2 md:hidden">
-                        <Button className="w-full" variant="outline" asChild><a href={image}>Preview</a></Button>
-                        <Button className="w-full" asChild><a href={url}>Buy Now</a></Button>
+                        <PreviewImage url={image}/>
+                        <Button className="w-full" asChild><a href={!user ? "/sign-in" : url}>Buy Now</a></Button>
                     </div>
                 </div>
             </div>
