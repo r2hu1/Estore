@@ -29,9 +29,9 @@ export default async function Header() {
             </div>
             <div className="hidden md:flex items-center justify-center gap-3">
                 <ul className="flex gap-6 mr-5">
-                    <li className="hover:text-primary text-sm"><Link href="/#ebooks">E-Books</Link></li>
-                    <li className="hover:text-primary text-sm"><Link href="/#templates">Templates</Link></li>
-                    <li className="hover:text-primary text-sm"><Link href="/#icons">Icons</Link></li>
+                    <li className="hover:text-primary text-sm"><Link href="/search/ebook">E-Books</Link></li>
+                    <li className="hover:text-primary text-sm"><Link href="/search/template">Templates</Link></li>
+                    <li className="hover:text-primary text-sm"><Link href="/search/icon">Icons</Link></li>
                 </ul>
                 <SignedOut>
                     <Button asChild><Link href="/sign-in">Login</Link></Button>
@@ -49,9 +49,9 @@ export default async function Header() {
                             <SheetHeader><ModeToggle /></SheetHeader>
                             <SheetDescription>
                                 <ul className="mb-6 grid gap-4 mt-20">
-                                    <Link href="/#ebooks"><li className="h-12 text-[16px] w-full hover:bg-secondary flex items-center justify-center rounded-sm">E-Books</li></Link>
-                                    <Link href="/#templates"><li className="h-12 text-[16px] w-full hover:bg-secondary flex items-center justify-center rounded-sm">Templates</li></Link>
-                                    <Link href="/#icons"><li className="h-12 text-[16px] w-full hover:bg-secondary flex items-center justify-center rounded-sm">Icons</li></Link>
+                                    <Link href="/search/ebook"><li className="h-12 text-[16px] w-full hover:bg-secondary flex items-center justify-center rounded-sm">E-Books</li></Link>
+                                    <Link href="/search/template"><li className="h-12 text-[16px] w-full hover:bg-secondary flex items-center justify-center rounded-sm">Templates</li></Link>
+                                    <Link href="/search/icon"><li className="h-12 text-[16px] w-full hover:bg-secondary flex items-center justify-center rounded-sm">Icons</li></Link>
                                 </ul>
                                 <Button className="w-full" asChild><Link href="/contact">Contact Us</Link></Button>
                                 <Button className="w-full mt-3" variant="outline" asChild><Link href="/contact">Request Demo</Link></Button>

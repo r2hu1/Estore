@@ -14,7 +14,7 @@ export default function Page({ params }) {
     return (
         <div>
             <Hero vlv={params.name == "icon" ? "Icon Packs" : params.name == "template" ? "Website Templates" : params.name == "ebook" ? "E-Books" : "Not Found"} />
-            <div className="flex flex-col justify-center items-center -mb-3" id="ebooks">
+            <div className="flex flex-col justify-center items-center -mb-4 mt-10" id="ebooks">
                 <h1 className="text-lg font-bold gradientText">
                     Search Result
                 </h1>
