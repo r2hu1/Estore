@@ -18,6 +18,10 @@ export const metadata = {
     template: '%s | Estore',
   },
   description: 'all in place to get icons, temlates, design in lowest cost possible.',
+  keywords: 'estore, digital marketplace, icons, templates, design,website templates, icons pack, low cost, free, cheap, best, low cost',
+  icons: {
+    icon: 'https://cloud.appwrite.io/v1/storage/buckets/658d50e2eed95470e244/files/658e6c1e8c79bd3a0d6b/view?project=658b03bee0e4b4e73614'
+  }
 }
 
 export default function RootLayout({ children }) {
