@@ -8,10 +8,24 @@ import Link from "next/link";
 import PreviewImage from "../../_components/PreviewImage";
 
 
-export const metadata = {
-    title: 'Icons',
-    description:'Category Icons'
-};
+export async function generateMetadata({ params,searchParams  }) {
+    const { documents: product } = await database.listDocuments(
+        process.env.APPWRITE_DATABASE_ID,
+        process.env.APPWRITE_TEMPLATES_COLLECTION_ID,
+        [
+            Query.equal('$id', params.id)
+        ],
+    );
+    let { name, image, price, description, url } = await product[0];
+    return {
+        metadataBase:`https://${searchParams}`,
+        title: name,
+        description: description,
+        openGraph: {
+            images: image,
+        },
+    }
+}
 
 export default async function Page({ params }) {
     let { documents } = await database.listDocuments(

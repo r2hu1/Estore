@@ -8,10 +8,24 @@ import Link from "next/link";
 import { currentUser } from "@clerk/nextjs";
 import PreviewImage from "../../_components/PreviewImage";
 
-export const metadata = {
-    title: 'Templates',
-    description:'Category Templates'
-};
+export async function generateMetadata({ params,searchParams  }) {
+    const { documents: product } = await database.listDocuments(
+        process.env.APPWRITE_DATABASE_ID,
+        process.env.APPWRITE_TEMPLATES_COLLECTION_ID,
+        [
+            Query.equal('$id', params.id)
+        ],
+    );
+    let { name, image, price, description, url } = await product[0];
+    return {
+        metadataBase:`https://${searchParams}`,
+        title: name,
+        description: description,
+        openGraph: {
+            images: image,
+        },
+    }
+}
 
 export default async function Page({ params }) {
     const user = await currentUser();
@@ -77,7 +91,7 @@ export default async function Page({ params }) {
                             </div>
                         </div>
                         <div className="mt-6 hidden md:flex gap-2">
-                            <PreviewImage url={image}/>
+                            <PreviewImage url={image} />
                             <Button className="w-full" asChild><Link href={!user ? "/sign-in" : url}>Buy Now</Link></Button>
                         </div>
                     </div>
@@ -87,7 +101,7 @@ export default async function Page({ params }) {
                         <img className="rounded-lg md:max-h-[340px] md:min-w-full transition hover:scale-105" src={image} alt={name} />
                     </div>
                     <div className="mt-6 flex gap-2 md:hidden">
-                        <PreviewImage url={image}/>
+                        <PreviewImage url={image} />
                         <Button className="w-full" asChild><Link href={!user ? "/sign-in" : url}>Buy Now</Link></Button>
                     </div>
                 </div>
