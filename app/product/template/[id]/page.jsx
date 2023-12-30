@@ -83,8 +83,8 @@ export default async function Page({ params }) {
                     </div>
                 </div>
                 <div className="w-full max-w-lg">
-                    <div>
-                        <img className="rounded-lg md:max-h-[340px] md:min-w-full" src={image} alt={name} />
+                    <div className="overflow-hidden rounded-lg">
+                        <img className="rounded-lg md:max-h-[340px] md:min-w-full transition hover:scale-105" src={image} alt={name} />
                     </div>
                     <div className="mt-6 flex gap-2 md:hidden">
                         <PreviewImage url={image}/>
